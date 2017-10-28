@@ -849,7 +849,7 @@
 					-webkit-transition: -webkit-transform 0.2s ease-in-out;
 					-ms-transition: -ms-transform 0.2s ease-in-out;
 					transition: transform 0.2s ease-in-out;
-					max-width: 100%;
+					max-width: 25%;
 					height: auto;
 					vertical-align: middle;
 				}
