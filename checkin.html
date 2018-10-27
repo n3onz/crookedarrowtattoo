@@ -5,6 +5,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script>
+			function loadTable(tableId, fields, data) {
+    				var rows = '';
+    				$.each(data, function(index, item) {
+       					var row = '<tr>';
+        				$.each(fields, function(index, field) {
+            					row += '<td>' + item[field+''] + '</td>';
+        				});
+        				rows += row + '<tr>';
+    				});
+    				$('#' + tableId).html(rows);
+			}
+		</script>
 	</head>
 	<body>
 		<div class="page-wrap">
@@ -48,29 +61,19 @@
 											<textarea name="tattoo" id="tattoo" rows="6" placeholder="Description and Placement"></textarea>
 										</div>
 										<ul class="actions">
-											<li><input value="Check-in" class="button" type="submit"></li>
+											<li><input value="Check-in" class="button" type="submit" onclick="loadTable()"></li>
 										</ul>
 									</form>
 								</div>
 							<!-- Waitlist -->
 								<div class="social column">
 									<h3>Waitlist for Walk-In Sunday</h3>
-									<ul class="icons">
-										<li><a href="https://www.facebook.com/CrookedArrowTattoo/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.instagram.com/crookedarrowtattoo/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									<h3>Business Hours</h3>
-									<ul>
-										<li>Monday - Tuesday: Closed</li>
-										<li>Wednesday - Thursday: 1-9PM</li>
-										<li>Friday - Saturday: 1-10PM</li>
-										<li>Sunday: 11AM-7PM Walk-Ins Only</li>
-									</ul>
-									<h3>Contact Info</h3>
-									<ul>
-										<li>(845)859-4440</li>
-										<li>crookedarrowtattoo@gmail.com</li>
-										<li><a href="https://www.google.com/maps/dir/''/crooked+arrow+tattoo/@41.3688328,-74.0361182,12z/">235 Main St, Highland Falls, NY 10928</a></li>
-									</ul>
+									<ol>
+										<li>Name<ul>
+											<li>Phone Number</li>
+											<li>Tattoo Desc</li>
+											</ul></li>
+									</ol>
 								</div>
 
 						</section>
