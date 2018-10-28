@@ -6,16 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<script>
-			function loadTable(tableId, fields, data) {
-    				var rows = '';
-    				$.each(data, function(index, item) {
-       					var row = '<tr>';
-        				$.each(fields, function(index, field) {
-            					row += '<td>' + item[field+''] + '</td>';
-        				});
-        				rows += row + '<tr>';
-    				});
-    				$('#' + tableId).html(rows);
+			$('.stored').keyup(function () {
+				localStorage[$(this).attr('name')] = $(this).val();
+			});
+			
+			function insRow(id) {
+    				var x = document.getElementById(id).insertRow(0);
+    				var y = x.insertCell(0);
+    				var z = x.insertCell(1);
+				var a = x.insertCell(2);
+    				y.innerHTML = "Name: " + localStorage.getItem("name");
+				z.innerHTML = "Phone #: " + localStorage.getItem("number");
+				a.innerHTML = "Tattoo: " + localStorage.getItem("tattoo");
+				localstorage.clear();
 			}
 		</script>
 	</head>
@@ -48,18 +51,19 @@
 									<form action="/checkin.php" method="post" enctype="text/plain">
 										<div class="field half first">
 											<label for="name">Name</label>
-											<input name="name" id="name" type="text" placeholder="Name">
+											<input name="name" id="name" type="text" class = "stored" placeholder="Name">
 										</div>
 										<div class="field half">
 											<label for="email">Phone Number</label>
-											<input name="number" id="number" type="text" placeholder="(###)-###-##">
+											<input name="number" id="number" type="text" class = "stored" placeholder="(###)-###-##">
 										</div>
 										<div class="field">
 											<label for="tattoo">Tattoo Description</label>
-											<textarea name="tattoo" id="tattoo" rows="6" placeholder="Description and Placement"></textarea>
+											<textarea name="tattoo" id="tattoo" rows="6" class = "stored" placeholder="Description and Placement"></textarea>
 										</div>
 										<ul class="actions">
-											<li><input value="Check-in" class="button" type="submit" onclick="loadTable()"></li>
+											<li><input value="Check-in" class="button" type="submit" onclick="insRow('myTable')"></li>
+											<li><input type="button" value="Remove First" onclick="document.getElementById('myTable').deleteRow(0)"></li>
 										</ul>
 									</form>
 								</div>
@@ -67,21 +71,6 @@
 								<div class="social column">
 									<h3>Waitlist for Walk-In Sunday</h3>
 									<table id="myTable" style="border: 1px solid black">
-										<tr>
-											<td>Name: Alex Heldstab</td>
-											<td>Phone Number: 512-963-8250</td>
-											<td>Tattoo Desc: Circuit Board on Right Pec</td>
-										</tr>
-										<tr>
-											<td>Name: </td>
-											<td>Phone Number: </td>
-											<td>Tattoo Desc: </td>
-										</tr>
-										<tr>
-											<td>Name: </td>
-											<td>Phone Number: </td>
-											<td>Tattoo Desc: </td>
-										</tr>
 									</table>
 								</div>
 
