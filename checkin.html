@@ -32,7 +32,7 @@
 							<!-- Form -->
 								<div class="column">
 									<h3>Check-in</h3>
-									<form action="#" method="post">
+									<form action="" method="post">
 										<div class="field half first">
 											<label for="name">Name</label>
 											<input name="name" id="name" type="text" class="stored" placeholder="Name">
@@ -47,7 +47,7 @@
 										</div>
 										<ul class="actions">
 											<li><input value="Check-in" class="button" onclick="insRow('myTable')"></li>
-											<li><input type="button" value="Remove First" onclick="document.getElementById('myTable').deleteRow(0)"></li>
+											<li><input value="Remove First" class="button" onclick="document.getElementById('myTable').deleteRow(1)"></li>
 										</ul>
 									</form>
 								</div>
@@ -55,6 +55,11 @@
 								<div class="social column">
 									<h3>Waitlist for Walk-In Sunday</h3>
 									<table id="myTable" style="border: 1px solid black">
+										<tr>
+											<th>Name</th>
+											<th>Phone #</th>
+											<th>Tattoo</th>
+										</tr>
 									</table>
 								</div>
 
@@ -65,19 +70,20 @@
 		<!-- Scripts -->
 			<script>
 				function insRow(id) {
+					var count = $('#myTable tr').length;
 					var na = document.getElementById('name');
 					var nu = document.getElementById('number');
 					var ta = document.getElementById('tattoo');
 					localStorage.setItem('name', na.value);
 					localStorage.setItem('number', nu.value);
 					localStorage.setItem('tattoo', ta.value);
-					var x = document.getElementById(id).insertRow(0);
+					var x = document.getElementById(id).insertRow(count+1);
 					var y = x.insertCell(0);
 					var z = x.insertCell(1);
 					var a = x.insertCell(2);
-					y.innerHTML = "Name: " + localStorage.getItem("name");
-					z.innerHTML = "Phone #: " + localStorage.getItem("number");
-					a.innerHTML = "Tattoo: " + localStorage.getItem("tattoo");
+					y.innerHTML = localStorage.getItem("name");
+					z.innerHTML = localStorage.getItem("number");
+					a.innerHTML = localStorage.getItem("tattoo");
 				}
 			</script>
 			<script src="assets/js/jquery.min.js"></script>
