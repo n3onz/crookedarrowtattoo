@@ -38,7 +38,7 @@
 											<input name="name" id="name" type="text" class="stored" placeholder="Name">
 										</div>
 										<div class="field half">
-											<label for="email">Phone Number</label>
+											<label for="number">Phone Number</label>
 											<input name="number" id="number" type="text" class="stored" placeholder="(###)-###-##">
 										</div>
 										<div class="field">
@@ -70,15 +70,15 @@
 							$('#name').val(localStorage["name"]);
 						}
 						if (localStorage["email"]) {
-							$('#email').val(localStorage["email"]);
+							$('#number').val(localStorage["number"]);
 						}
 						if (localStorage["message"]) {
-							$('#message').val(localStorage["message"]);
+							$('#tattoo').val(localStorage["tattoo"]);
 						}
 					}
 					init();
 				});
-				$('.stored').keyup(function () {
+				$('.stored').change(function () {
 					localStorage[$(this).attr('name')] = $(this).val();
 				});
 
