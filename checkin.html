@@ -64,25 +64,13 @@
 
 		<!-- Scripts -->
 			<script>
-				$(document).ready(function () {
-					function init() {
-						if (localStorage["name"]) {
-							$('#name').val(localStorage["name"]);
-						}
-						if (localStorage["email"]) {
-							$('#number').val(localStorage["number"]);
-						}
-						if (localStorage["message"]) {
-							$('#tattoo').val(localStorage["tattoo"]);
-						}
-					}
-					init();
-				});
-				$('.stored').change(function () {
-					localStorage[$(this).attr('name')] = $(this).val();
-				});
-
 				function insRow(id) {
+					var na = document.getElementById('name');
+					var nu = document.getElementById('number');
+					var ta = document.getElementById('tattoo');
+					localStorage.setItem('name', na.value);
+					localStorage.setItem('number', nu.value);
+					localStorage.setItem('tattoo', ta.value);
 					var x = document.getElementById(id).insertRow(0);
 					var y = x.insertCell(0);
 					var z = x.insertCell(1);
