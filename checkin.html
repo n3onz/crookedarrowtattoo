@@ -18,6 +18,7 @@
     				y.innerHTML = "Name: " + localStorage.getItem("name");
 				z.innerHTML = "Phone #: " + localStorage.getItem("number");
 				a.innerHTML = "Tattoo: " + localStorage.getItem("tattoo");
+				localstorage.clear();
 			}
 		</script>
 	</head>
@@ -50,15 +51,15 @@
 									<form action="" method="post" enctype="text/plain">
 										<div class="field half first">
 											<label for="name">Name</label>
-											<input name="name" id="name" type="text" class = "stored" placeholder="Name">
+											<input name="name" id="name" type="text" class="stored" placeholder="Name">
 										</div>
 										<div class="field half">
 											<label for="email">Phone Number</label>
-											<input name="number" id="number" type="text" class = "stored" placeholder="(###)-###-##">
+											<input name="number" id="number" type="text" class="stored" placeholder="(###)-###-##">
 										</div>
 										<div class="field">
 											<label for="tattoo">Tattoo Description</label>
-											<textarea name="tattoo" id="tattoo" rows="6" class = "stored" placeholder="Description and Placement"></textarea>
+											<textarea name="tattoo" id="tattoo" rows="6" class="stored" placeholder="Description and Placement"></textarea>
 										</div>
 										<ul class="actions">
 											<li><input value="Check-in" class="button" type="submit" onclick="insRow('myTable')"></li>
