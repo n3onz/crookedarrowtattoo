@@ -6,6 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<script>
+			$(document).ready(function () {
+    				function init() {
+        				if (localStorage["name"]) {
+            					$('#name').val(localStorage["name"]);
+        				}
+        				if (localStorage["email"]) {
+            					$('#email').val(localStorage["email"]);
+        				}
+        				if (localStorage["message"]) {
+            					$('#message').val(localStorage["message"]);
+        				}
+    				}
+    				init();
+			});
 			$('.stored').keyup(function () {
 				localStorage[$(this).attr('name')] = $(this).val();
 			});
