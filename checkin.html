@@ -5,36 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script>
-			$(document).ready(function () {
-    				function init() {
-        				if (localStorage["name"]) {
-            					$('#name').val(localStorage["name"]);
-        				}
-        				if (localStorage["email"]) {
-            					$('#email').val(localStorage["email"]);
-        				}
-        				if (localStorage["message"]) {
-            					$('#message').val(localStorage["message"]);
-        				}
-    				}
-    				init();
-			});
-			$('.stored').keyup(function () {
-				localStorage[$(this).attr('name')] = $(this).val();
-			});
-			
-			function insRow(id) {
-    				var x = document.getElementById(id).insertRow(0);
-    				var y = x.insertCell(0);
-    				var z = x.insertCell(1);
-				var a = x.insertCell(2);
-    				y.innerHTML = "Name: " + localStorage.getItem("name");
-				z.innerHTML = "Phone #: " + localStorage.getItem("number");
-				a.innerHTML = "Tattoo: " + localStorage.getItem("tattoo");
-				localstorage.clear();
-			}
-		</script>
 	</head>
 	<body>
 		<div class="page-wrap">
@@ -93,6 +63,36 @@
 		</div>
 
 		<!-- Scripts -->
+			<script>
+				$(document).ready(function () {
+					function init() {
+						if (localStorage["name"]) {
+							$('#name').val(localStorage["name"]);
+						}
+						if (localStorage["email"]) {
+							$('#email').val(localStorage["email"]);
+						}
+						if (localStorage["message"]) {
+							$('#message').val(localStorage["message"]);
+						}
+					}
+					init();
+				});
+				$('.stored').keyup(function () {
+					localStorage[$(this).attr('name')] = $(this).val();
+				});
+
+				function insRow(id) {
+					var x = document.getElementById(id).insertRow(0);
+					var y = x.insertCell(0);
+					var z = x.insertCell(1);
+					var a = x.insertCell(2);
+					y.innerHTML = "Name: " + localStorage.getItem("name");
+					z.innerHTML = "Phone #: " + localStorage.getItem("number");
+					a.innerHTML = "Tattoo: " + localStorage.getItem("tattoo");
+					localstorage.clear();
+				}
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
