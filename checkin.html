@@ -70,14 +70,14 @@
 		<!-- Scripts -->
 			<script>
 				function insRow(id) {
-					var count = $('#myTable tr').length;
+					var count = document.getElementById(id).rows.length;
 					var na = document.getElementById('name');
 					var nu = document.getElementById('number');
 					var ta = document.getElementById('tattoo');
 					localStorage.setItem('name', na.value);
 					localStorage.setItem('number', nu.value);
 					localStorage.setItem('tattoo', ta.value);
-					var x = document.getElementById(id).insertRow(count+1);
+					var x = document.getElementById(id).insertRow(count);
 					var y = x.insertCell(0);
 					var z = x.insertCell(1);
 					var a = x.insertCell(2);
