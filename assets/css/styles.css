@@ -415,7 +415,7 @@ ul{
 .single-slider a{
   display: inline-block;
   padding:10px 30px;
-  background: #fb9902;
+  background: #D4BF91;
   color: #fff;
   text-transform: uppercase;
   color: #fff;
@@ -423,7 +423,7 @@ ul{
 }
 .single-slider a:hover{
   background: #fff;
-  color: #fb9902;
+  color: #D4BF91;
 }
 .slider-active .owl-dots{
   position: absolute;
@@ -510,7 +510,7 @@ ul{
 }
 .wedo-icon span:before{
   font-size: 50px;
-  color: #fb9902;
+  color: #D4BF91;
 }
 .wedo-info {
     overflow: hidden;
@@ -981,7 +981,7 @@ ul{
 }
 .footer-bottom-area{
   padding: 20px 0px;
-  background: #fb9902;
+  background: #D4BF91;
 }
 
 .copyright p a{
@@ -1082,7 +1082,7 @@ a#scrollUp i:before{
 }
 .fanfact-icon i{
   font-size: 100px;
-  color: #fb9902;
+  color: #D4BF91;
 }
 /*-----------fanfact-area end-----------*/
 .banner-area{
@@ -1127,7 +1127,7 @@ a#scrollUp i:before{
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
-  background: #fb9902;
+  background: #D4BF91;
 }
 /*--------------------tetsmonial-area end--------------------*/
 
@@ -1161,7 +1161,7 @@ a#scrollUp i:before{
 .faq-wrap .panel-default a {
   display: block;
   position: relative;
-  background:#fb9902;
+  background:#D4BF91;
   color:#fff;
   overflow:hidden;
   font-size:14px;
@@ -1188,14 +1188,14 @@ a#scrollUp i:before{
   font-size: 16px;
   position: absolute;
   right: 0;
-  background: #fb9902;
+  background: #D4BF91;
   height: 100%;
   top: 0;
   width: 35px;
   color: #fff;
   text-align: center;
   line-height: 38px;
-  border:1px solid #fb9902;
+  border:1px solid #D4BF91;
 }
 .faq-wrap .panel {
     margin-bottom: 10px;
@@ -1373,7 +1373,7 @@ a#scrollUp i:before{
   font-weight: 600;
 }
 .breadcumb-wrap ul li.active{
-  color: #fb9902;
+  color: #D4BF91;
 }
 /*-------------------breadcumb-area end-------------------*/
 .about-area3 .about-img {
@@ -1408,7 +1408,7 @@ a#scrollUp i:before{
   border-radius: 50%;
   line-height: 100px;
   font-size: 30px;
-  color: #fb9902;
+  color: #D4BF91;
   margin-bottom: 25px;
 }
 .work-wrap h3{
@@ -1446,7 +1446,7 @@ a#scrollUp i:before{
   width: 100px;
 }
 .working-time-wrap ul li.weekend{
-  color: #fb9902;
+  color: #D4BF91;
 }
 .working-time-wrap ul li.weekend:before{
   border-bottom: 1px dashed #fb9902; 
@@ -1848,7 +1848,7 @@ a.appoinment-btn:hover{
   top: 50%;
   left: 30px;
   font-size: 35px;
-  color: #fb9902;
+  color: #D4BF91;
 }
 .contact-wrap ul li p{
   font-size: 14px;
