@@ -63,7 +63,7 @@ a {
 	font-size:14px;
 }
 a:hover{
-	color:#fb9902;
+	color:#D4BF91;
 }
 a:active, a:hover, a:focus {
 	outline: none;
@@ -220,7 +220,7 @@ ul{
     transition: all .3s;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
-  border-top: 3px solid #fb9902;
+  border-top: 3px solid #D4BF91;
   visibility: hidden;
   opacity: 0;
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -313,7 +313,7 @@ ul{
   background: #fff;
 }
 .responsive-menu-wrap .slicknav_nav {
-    background: #fb9902 none repeat scroll 0 0;
+    background: #D4BF91 none repeat scroll 0 0;
     border-radius: 0px;
     clear: both;
     color: #fff;
