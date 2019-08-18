@@ -97,8 +97,8 @@
 						<thead>
 							<tr>
 								<th class="shoping-cart-name">Name</th>
-								<th class="shoping-cart-price">Phone #</th>
-								<th class="shoping-cart-total">Tattoo</th>
+								<th class="shoping-cart-name">Phone #</th>
+								<th class="shoping-cart-name">Tattoo</th>
 							</tr>
 						</thead>
 					</table>
@@ -127,9 +127,9 @@
 			var y = x.insertCell(0);
 			y.className = "shoping-cart-name";
 			var z = x.insertCell(1);
-			z.className = "shoping-cart-price"
+			z.className = "shoping-cart-name"
 			var a = x.insertCell(2);
-			a.className = "shoping-cart-total"
+			a.className = "shoping-cart-name"
 			y.innerHTML = localStorage.getItem("name");
 			z.innerHTML = localStorage.getItem("number");
 			a.innerHTML = localStorage.getItem("tattoo");
