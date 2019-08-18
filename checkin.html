@@ -82,22 +82,24 @@
 						<textarea name="tattoo" id="tattoo" rows="6" class="stored" placeholder="Description and Placement"></textarea>
 					</div>
 					<ul class="col-md-12 col-sm-12 col-xs-12">
-						<li><input value="Check-in" class="button" onclick="insRow('myTable')" readonly></li>
-						<li><input value="Remove First" class="button" onclick="document.getElementById('myTable').deleteRow(1)" readonly></li>
+						<li><input value="Check-in" class="cont-submit btn-contact btn-style" onclick="insRow('myTable')" readonly></li>
+						<li><input value="Remove First" class="cont-submit btn-contact btn-style" onclick="document.getElementById('myTable').deleteRow(1)" readonly></li>
 					</ul>
 				</form>
 			    </div>
                     </div>
                 </div>
                 <div class="row">
-			<h3>Waitlist for Walk-In Sunday</h3>
-			<table id="myTable" style="border: 1px solid black">
-				<tr>
-					<th>Name</th>
-					<th>Phone #</th>
-					<th>Tattoo</th>
-				</tr>
-			</table>  
+			<div class="col-md-8 col-sm-6 col-xs-12">
+				<h3>Waitlist for Walk-In Sunday</h3>
+				<table id="myTable" style="border: 1px solid white">
+					<tr>
+						<th>Name</th>
+						<th>Phone #</th>
+						<th>Tattoo</th>
+					</tr>
+				</table>  
+			</div>
                 </div>
             </div>
         </div>
